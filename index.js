@@ -95,3 +95,9 @@ app.get('/user',
   connectEnsureLogin.ensureLoggedIn(),
   (req, res) => res.send({user: req.user})
 );
+
+/* REGISTER SOME USERS */
+
+UserDetails.register({username:'shin', active: false}, 'shin');
+UserDetails.register({username:'yanagi', active: false}, 'yanagi');
+UserDetails.register({username:'kei', active: false}, 'kei');
